@@ -1,3 +1,6 @@
 #art {
   background-color: bisque;
 }
+#canvas-div {
+  border: 2px solid black;
+}
