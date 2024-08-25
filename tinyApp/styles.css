@@ -1,3 +1,15 @@
-h1 {
-  color: aqua;
+/*
+so for the time being this is just all the styles, this for sure doesnt seem like the best way to do  this buttttt so it goes
+
+id like individual styles for each section, its been decided..
+
+seems like its a basic display property for each section element that will display or hide the page for me..... should be somewhat straightforward
+
+*/
+
+#title-page {
+  background-color: aqua;
+}
+#title-page h1 {
+  color: white;
 }

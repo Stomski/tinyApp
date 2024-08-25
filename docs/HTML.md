@@ -2,7 +2,7 @@
 
 so each of the 5 pages will appear as sections, plus title page and contact(?)
 
-1. 
+TITLE PAGE
 1. a calculator
 2. a note application
 3. a game

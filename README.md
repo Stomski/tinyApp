@@ -20,5 +20,7 @@ Once the framework is to a point that it can be deployed,  the next step will be
 
 so it seems to me that the easiest way to manage the single page, modular app interface will be to build seperate `<sections>` that will seperate each of the above 5 goal sections, 
 
-and then a script or CSS that cycles through the sections
+and then a script or CSS that cycles through the sections?
+
+what displays as the title on the tab? preferably the tool im using but lets be honest its not gonna start that way
 
