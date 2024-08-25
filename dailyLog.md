@@ -21,3 +21,7 @@ git repo built, docs started
 
 html started! hello world, push to git
 
+worked on the HTML docs, going to start with at least my first page, the calculator, and my second page, my canvas, as sections in the HTML
+
+the dream here is a sort of carousel like effect for the single page app
+
