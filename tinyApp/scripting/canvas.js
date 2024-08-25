@@ -21,59 +21,34 @@ below is what i found for a shimming function that will make sure my request ani
   //below is the establishment of the basic background canvas, and the context,
   //both get printed
 
-  console.log("top of canvas build");
   const canvas = document.getElementById("canvas");
-  console.log("canvas width>>>>", canvas.width);
+
   const context = canvas.getContext("2d");
-  console.log("canvas context>>>", context);
 
   const canvasWidth = canvas.width;
   const canvasHeight = canvas.height;
 
-  // this fills the background gray
-  context.fillStyle = "gray";
-  context.fillRect(0, 0, canvasWidth, canvasHeight);
-
-  /************************************* */
-  // now to test a shape... this draws a triangle
-  //   context.translate(canvasWidth / 2, canvasHeight / 2);
-
-  //   context.fillStyle = "blue";
-  //   context.beginPath();
-  //   context.moveTo(25, 25);
-  //   context.lineTo(105, 25);
-  //   context.lineTo(25, 105);
-  //   context.fill();
-
-  /****************************************** */
-  // some testing with "points" you cant just make a point though so these are rectangles
-  context.translate(canvasWidth / 2, canvasHeight / 2);
-
-  //   context.fillStyle = "red";
-
-  //   const numPoints = 50;
-  //   const pointSize = 5;
-  //   const radius = 150;
-
-  //   for (let i = 0; i <= numPoints; i++) {
-  //     console.log(i);
-  //     let x = radius * Math.cos((Math.PI / numPoints) * i * 2);
-  //     let y = radius * Math.sin((Math.PI / numPoints) * i * 2);
-  //     context.fillRect(x, y, pointSize, pointSize);
-  //   }
-
   /***************************************************** */
   // animation attempts
-  context.fillStyle = "red";
+  context.translate(canvasWidth / 2, canvasHeight / 2 - 30);
+
   //   context.fillRect(0, 0, canvasWidth, canvasHeight);
 
-  context.fillStyle = "red";
   let n = 4.4;
   let d = 124;
+  let frameCount = 1;
+
+  const gradient = context.createLinearGradient(-400, 0, 700, 0);
+  gradient.addColorStop(0, "white");
+
+  gradient.addColorStop(1, "black");
 
   function drawIt() {
     window.requestAnimFrame(drawIt);
-    context.fillStyle = "gray";
+
+    //reset the background at the start of each frame
+
+    context.fillStyle = gradient;
     context.fillRect(
       -canvasWidth / 2,
       -canvasHeight / 2,
@@ -81,23 +56,38 @@ below is what i found for a shimming function that will make sure my request ani
       canvasHeight
     );
 
-    context.fillStyle = "red";
     context.beginPath();
 
     for (let i = 1; i < 700; i += 1) {
       let k = i * d;
 
-      let r = 250 * Math.sin(n * k);
+      let r = 230 * Math.sin(n * k);
       let x = r * Math.cos(k) * 2;
       let y = 2 * r * Math.sin(k);
-      //   context.moveTo(x, y);
-      context.strokeStyle = "rgb(200,18,29)";
+
+      context.strokeStyle = `rgb(${i},18,29)`;
       context.lineTo(x, y);
     }
 
     context.lineWidth = 1;
 
     context.stroke();
+
+    /*********************** */
+    //text
+
+    context.fillStyle = "black";
+    context.font = "italic " + 20 + "pt Arial ";
+    context.fillText(`n=${n}`, -canvasWidth / 2 + 20, canvasHeight / 2 - 35);
+    context.fillText(`d=${d}`, -canvasWidth / 2 + 20, canvasHeight / 2 - 8);
+    context.fillStyle = "white";
+    context.fillText(
+      `framecount =${frameCount}`,
+      -canvasWidth / 2 + 550,
+      canvasHeight / 2 - 8
+    );
+
+    frameCount++;
     d += 0.000005;
     n += 0.0000005;
   }
