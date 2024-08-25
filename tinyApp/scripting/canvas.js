@@ -32,39 +32,74 @@ below is what i found for a shimming function that will make sure my request ani
 
   // this fills the background gray
   context.fillStyle = "gray";
-  context.fillRect(0, 0, 500, 500);
+  context.fillRect(0, 0, canvasWidth, canvasHeight);
 
-  // now to test a shape...
+  /************************************* */
+  // now to test a shape... this draws a triangle
+  //   context.translate(canvasWidth / 2, canvasHeight / 2);
+
+  //   context.fillStyle = "blue";
+  //   context.beginPath();
+  //   context.moveTo(25, 25);
+  //   context.lineTo(105, 25);
+  //   context.lineTo(25, 105);
+  //   context.fill();
+
+  /****************************************** */
+  // some testing with "points" you cant just make a point though so these are rectangles
   context.translate(canvasWidth / 2, canvasHeight / 2);
 
-  context.fillStyle = "blue";
-  context.beginPath();
-  context.moveTo(25, 25);
-  context.lineTo(105, 25);
-  context.lineTo(25, 105);
-  context.fill();
+  //   context.fillStyle = "red";
 
-  // some testing with "points" you cant just make a point though so these are rectangles
+  //   const numPoints = 50;
+  //   const pointSize = 5;
+  //   const radius = 150;
+
+  //   for (let i = 0; i <= numPoints; i++) {
+  //     console.log(i);
+  //     let x = radius * Math.cos((Math.PI / numPoints) * i * 2);
+  //     let y = radius * Math.sin((Math.PI / numPoints) * i * 2);
+  //     context.fillRect(x, y, pointSize, pointSize);
+  //   }
+
+  /***************************************************** */
+  // animation attempts
   context.fillStyle = "red";
+  //   context.fillRect(0, 0, canvasWidth, canvasHeight);
 
-  const numPoints = 50;
-  const pointSize = 5;
-  const radius = 150;
+  context.fillStyle = "red";
+  const pointSize = 2;
+  let n = 4.4;
+  let d = 124;
 
-  for (let i = 0; i <= numPoints; i++) {
-    console.log(i);
-    let x = radius * Math.cos((Math.PI / numPoints) * i * 2);
-    let y = radius * Math.sin((Math.PI / numPoints) * i * 2);
-    context.fillRect(x, y, pointSize, pointSize);
-  }
-  let x = -200;
   function drawIt() {
     window.requestAnimFrame(drawIt);
-    var canvas = document.getElementById("canvas");
-    var c = canvas.getContext("2d");
-    c.fillStyle = "red";
-    c.fillRect(x, 100, 200, 100);
-    x += 5;
+    context.fillStyle = "gray";
+    context.fillRect(
+      -canvasWidth / 2,
+      -canvasHeight / 2,
+      canvasWidth,
+      canvasHeight
+    );
+
+    context.fillStyle = "red";
+    context.beginPath();
+
+    for (let i = 1; i < 2000; i += 1) {
+      let k = i * d;
+
+      let r = 250 * Math.sin(n * k);
+      let x = r * Math.cos(k) * 2;
+      let y = 2 * r * Math.sin(k);
+      //   context.moveTo(x, y);
+      context.lineTo(x, y);
+    }
+    context.closePath();
+    context.lineWidth = 1;
+    context.strokeStyle = "black";
+    context.stroke();
+    d += 0.000005;
+    n += 0.0000005;
   }
   window.requestAnimFrame(drawIt);
 }
