@@ -34,8 +34,8 @@ below is what i found for a shimming function that will make sure my request ani
 
   //   context.fillRect(0, 0, canvasWidth, canvasHeight);
 
-  let n = 4.4;
-  let d = 124;
+  let n = 8.727;
+  let d = 98.274;
   let frameCount = 1;
 
   const gradient = context.createLinearGradient(-400, 0, 700, 0);
