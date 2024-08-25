@@ -68,7 +68,6 @@ below is what i found for a shimming function that will make sure my request ani
   //   context.fillRect(0, 0, canvasWidth, canvasHeight);
 
   context.fillStyle = "red";
-  const pointSize = 2;
   let n = 4.4;
   let d = 124;
 
@@ -85,18 +84,19 @@ below is what i found for a shimming function that will make sure my request ani
     context.fillStyle = "red";
     context.beginPath();
 
-    for (let i = 1; i < 2000; i += 1) {
+    for (let i = 1; i < 700; i += 1) {
       let k = i * d;
 
       let r = 250 * Math.sin(n * k);
       let x = r * Math.cos(k) * 2;
       let y = 2 * r * Math.sin(k);
       //   context.moveTo(x, y);
+      context.strokeStyle = "rgb(200,18,29)";
       context.lineTo(x, y);
     }
-    context.closePath();
+
     context.lineWidth = 1;
-    context.strokeStyle = "black";
+
     context.stroke();
     d += 0.000005;
     n += 0.0000005;
