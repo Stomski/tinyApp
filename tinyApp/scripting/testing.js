@@ -1,7 +1,7 @@
 export function test() {
-  console.log("TEST WORKING");
+  console.log("Top of test script");
   const testElement = document.querySelector("#testingh2");
-  console.log(testElement, "<test element, pre change");
+  //   console.log(testElement, "<test element, pre change");
   testElement.innerText = "fuck yes.";
-  console.log(testElement, "<test element, post change");
+  //   console.log(testElement, "<test element, post change");
 }
