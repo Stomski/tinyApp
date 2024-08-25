@@ -1,0 +1,7 @@
+/*
+ok, upgrade, each pages CSS will exist in its own file, and somehow we will cycle through all of those
+*/
+
+@import "title.css";
+@import "calculator.css";
+@import "art.css";
