@@ -2,6 +2,14 @@
 ok, upgrade, each pages CSS will exist in its own file, and somehow we will cycle through all of those
 */
 
+@import "mission.css";
 @import "title.css";
 @import "calculator.css";
 @import "art.css";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
