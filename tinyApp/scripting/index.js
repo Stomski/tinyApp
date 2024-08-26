@@ -3,13 +3,14 @@
 import * as testing from "./testing.js";
 import * as canvas from "./canvas.js";
 import * as selectorFunctions from "./selector.js";
+import * as titlePageFunctions from "./titlePage.js";
 
-console.log("hello from the INDEX.JS");
-const titlePage = document.querySelector("#title-page");
+// const titlePage = document.querySelector("#title-page");
 
-selectorFunctions.sectionStateSetter(titlePage);
+selectorFunctions.sectionStateSetter("#title-page");
+
+titlePageFunctions.titleSetup();
+
 testing.test();
-canvas.canvasBuild();
 
-// const canvas = document.getElementById("canvas");
-// console.log("canvas>>>>", canvas);
+// canvas.canvasBuild();

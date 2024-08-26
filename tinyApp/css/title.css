@@ -4,7 +4,13 @@
 }
 #title-page h1 {
   color: black;
+  font-size: 6vmin;
 }
+#title-page h3 {
+  color: black;
+  font-size: 4vmin;
+}
+
 #title-full-div {
   display: flex;
   height: 100vh;

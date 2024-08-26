@@ -11,16 +11,22 @@ how do i keep track of that variable?
 
 */
 
-export function sectionStateSetter(selection) {
+export function sectionStateSetter(selectionString) {
+  console.log(
+    "top of the function sectionStateSetter(selection) ",
+    selectionString
+  );
   const missionPage = document.querySelector("#mission-page");
   const calculator = document.querySelector("#calculator");
   const titlePage = document.querySelector("#title-page");
   const art = document.querySelector("#art");
 
+  let selectionElement = document.querySelector(selectionString);
+
   const allPages = [missionPage, calculator, titlePage, art];
 
   allPages.forEach((page) => {
-    if (page !== selection) {
+    if (page !== selectionElement) {
       page.style.display = "none";
     } else {
       page.style.display = "block";
