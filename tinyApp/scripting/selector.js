@@ -11,6 +11,8 @@ how do i keep track of that variable?
 
 */
 
+import * as canvas from "./canvas.js";
+
 export function sectionStateSetter(selectionString) {
   console.log(
     "top of the function sectionStateSetter(selection) ",
@@ -32,4 +34,12 @@ export function sectionStateSetter(selectionString) {
       page.style.display = "block";
     }
   });
+
+  if (selectionElement === art) {
+    canvas.canvasBuild();
+  }
+  if (selectionElement === titlePage) {
+    const pulldown = document.querySelector("#page-select");
+    pulldown.value = "...";
+  }
 }

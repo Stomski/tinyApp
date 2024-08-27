@@ -15,7 +15,7 @@
           <label for="page-select">expore something simple: </label>
           <select name="page-select" id="page-select">
             <option value="#mission-statement">...</option>
-            <option value="#mission-statement">Mission Statement</option>
+            <option value="#mission-page">Mission Statement</option>
             <option value="calculator">Calculator</option>
             <option value="#art">Art</option>
             <option value="pumpernickel">Pumpernickel</option>
@@ -37,10 +37,14 @@
     </section>
 
     <section id="art">
-      <h1>Simple Art</h1>
+      <header id="art-header">
+        <h1>Simple Art</h1>
+        <div class="home-button" id="art-home-button">home</div>
+      </header>
       <h2 id="testingh2">not working</h2>
+
       <div id="canvas-div">
-        <canvas id="canvas" width="1000" height="1000"></canvas>
+        <canvas id="canvas" width="1000px" height="1000px"></canvas>
       </div>
     </section>
     <script type="module" src="scripting/index.js"></script>

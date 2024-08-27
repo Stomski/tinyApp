@@ -18,4 +18,10 @@ export function titleSetup() {
     );
     selectorFunctions.sectionStateSetter(pulldown.value);
   };
+
+  const artHomeButton = document.querySelector("#art-home-button");
+
+  artHomeButton.onclick = () => {
+    selectorFunctions.sectionStateSetter("#title-page");
+  };
 }

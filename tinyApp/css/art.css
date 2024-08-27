@@ -1,6 +1,7 @@
 #art {
-  background-color: bisque;
+  background-color: rgb(42, 86, 156);
   display: block;
+  color: white;
 }
 #canvas-div {
   border: 2px solid black;
