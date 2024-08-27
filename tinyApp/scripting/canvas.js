@@ -86,7 +86,7 @@ below is what i found for a shimming function that will make sure my request ani
 
   let numPoints = 3000;
 
-  let flag = "up";
+  let flag = "down";
   function drawIt() {
     window.requestAnimFrame(drawIt);
 
@@ -99,7 +99,7 @@ below is what i found for a shimming function that will make sure my request ani
       canvasWidth,
       canvasHeight
     );
-    if (numPoints > 2500) {
+    if (numPoints > 3600) {
       flag = "down";
     }
     if (numPoints < 4) {
@@ -132,9 +132,9 @@ below is what i found for a shimming function that will make sure my request ani
 
       context.lineWidth = 1;
       context.strokeStyle = `rgb(${red}, ${green}, ${blue})`;
-      if (numPoints < 300) {
-        context.strokeStyle = "rgb(255,0,0)";
-      }
+      // if (numPoints < 300) {
+      //   context.strokeStyle = "rgb(255,0,0)";
+      // }
       context.stroke();
     }
 

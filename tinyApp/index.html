@@ -9,7 +9,7 @@
   <body>
     <section id="title-page">
       <div id="title-full-div">
-        <h1>Welcome to Plain and Simple</h1>
+        <h1>Plain and Simple</h1>
         <h3>a study of the basics</h3>
         <div id="title-pulldown">
           <label for="page-select">expore something simple: </label>
@@ -27,11 +27,11 @@
 
     <section id="mission-page">
       <div id="mission-full-div">
-        <h1>Why Plain and Simple?</h1>
+        <h1>Why?</h1>
         <h3>
           Plain and Simple facilitates the exploration of plain JS in a simple
           HTML/CSS framework. One page, no libraries, no nonsense, with one
-          goal: build something interesting- plainly, simply.
+          goal: Build something interesting- plainly, simply.
         </h3>
         <div class="home-button" id="mission-home-button">home</div>
       </div>
@@ -45,16 +45,31 @@
     </section>
 
     <section id="art">
-      <header id="art-header">
-        <h1>Simple Art</h1>
-        <div class="home-button" id="art-home-button">home</div>
-      </header>
-      <h2 id="testingh2">not working</h2>
+      <div id="art-full-div">
+        <header id="art-header">
+          <h1>Simple Art</h1>
+          <div class="home-button" id="art-home-button">home</div>
+        </header>
+        <h2 id="testingh2">not working</h2>
+        <div id="canvas-controls-div"></div>
+        <div id="canvas-div">
+          <div>below is a study of a sinusoid, or a mathematical rose</div>
+          <p>
+            establish points for all integer values of i, from 1-numPoints {<br />
+            k = i * d;<br />
 
-      <div id="canvas-div">
-        <canvas id="canvas" width="1000px" height="1000px"></canvas>
+            r = sin(n * k);<br />
+            x = r * cos(k);<br />
+            y = r * sin(k);<br />
+            point[i] = [x, y];<br />
+            } <br />
+            draw lines between all justaposed points, + secret color sauce
+          </p>
+          <canvas id="canvas" width="1000px" height="1000px"></canvas>
+        </div>
       </div>
     </section>
+    <footer>all rights reserved STOMSKI.COM</footer>
     <script type="module" src="scripting/index.js"></script>
   </body>
 </html>
