@@ -20,6 +20,11 @@ export function titleSetup() {
   };
 
   const artHomeButton = document.querySelector("#art-home-button");
+  const missionHomeButton = document.querySelector("#mission-home-button");
+
+  missionHomeButton.onclick = () => {
+    selectorFunctions.sectionStateSetter("#title-page");
+  };
 
   artHomeButton.onclick = () => {
     selectorFunctions.sectionStateSetter("#title-page");
