@@ -2,7 +2,7 @@
   background-color: rgb(42, 86, 156);
   display: block;
   color: white;
-  height: 100vh;
+  height: 100%;
 }
 
 #art-header {
@@ -27,7 +27,6 @@
 }
 
 #canvas-div {
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>tinyApp</title>
+    <title>Plain + Simple</title>
   </head>
   <body>
     <section id="title-page">
@@ -12,7 +12,7 @@
         <h1>Plain and Simple</h1>
         <h3>a study of the basics</h3>
         <div id="title-pulldown">
-          <label for="page-select">expore something simple: </label>
+          <label for="page-select">expore: </label>
           <select name="page-select" id="page-select">
             <option value="#mission-statement">...</option>
             <option value="#mission-page">Mission Statement</option>
@@ -28,12 +28,13 @@
     <section id="mission-page">
       <div id="mission-full-div">
         <h1>Why?</h1>
-        <h3>
+        <p id="mission-p">
           Plain and Simple facilitates the exploration of plain JS in a simple
-          HTML/CSS framework. One page, no libraries, no nonsense, with one
-          goal: Build something interesting- plainly, simply.
-        </h3>
-        <div class="home-button" id="mission-home-button">home</div>
+          HTML/CSS framework. One page, three languages, no libraries, no
+          nonsense.<br />
+          The goal: Build something interesting- plainly, simply.
+        </p>
+        <div class="home-button clickable" id="mission-home-button">home</div>
       </div>
     </section>
 
@@ -48,14 +49,13 @@
       <div id="art-full-div">
         <header id="art-header">
           <h1>Simple Art</h1>
-          <div class="home-button" id="art-home-button">home</div>
+          <div class="home-button clickable" id="art-home-button">home</div>
         </header>
-        <h2 id="testingh2">not working</h2>
         <div id="canvas-controls-div"></div>
         <div id="canvas-div">
-          <div>below is a study of a sinusoid, or a mathematical rose</div>
+          <div>A study of a sinusoid, or a mathematical rose</div>
           <p>
-            establish points for all integer values of i, from 1-numPoints {<br />
+            For all integer values (i), where 0 < i <= numPoints {<br />
             k = i * d;<br />
 
             r = sin(n * k);<br />
@@ -63,13 +63,13 @@
             y = r * sin(k);<br />
             point[i] = [x, y];<br />
             } <br />
-            draw lines between all justaposed points, + secret color sauce
+            connect consecutive points, while traversing the color spectrum
           </p>
           <canvas id="canvas" width="1000px" height="1000px"></canvas>
         </div>
       </div>
     </section>
-    <footer>all rights reserved STOMSKI.COM</footer>
+    <!-- <footer>all rights reserved STOMSKI.COM</footer> -->
     <script type="module" src="scripting/index.js"></script>
   </body>
 </html>
