@@ -1,12 +1,12 @@
 // so this is the index script, it imports all my scripting.
 
 import * as testing from "./testing.js";
-import * as canvas from "./canvas.js";
 
-console.log("hello from the INDEX.JS");
+import * as selectorFunctions from "./selector.js";
+import * as titlePageFunctions from "./titlePage.js";
+
+// selectorFunctions.sectionStateSetter("#calculator");
+selectorFunctions.sectionStateSetter("#title-page");
+titlePageFunctions.titleSetup();
 
 testing.test();
-canvas.canvasBuild();
-
-// const canvas = document.getElementById("canvas");
-// console.log("canvas>>>>", canvas);

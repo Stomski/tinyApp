@@ -4,27 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>tinyApp</title>
+    <title>Plain + Simple</title>
   </head>
   <body>
     <section id="title-page">
-      <h1>hello world</h1>
+      <div id="title-full-div">
+        <h1>Plain and Simple</h1>
+        <h3>a study of the basics</h3>
+        <div id="title-pulldown">
+          <label for="page-select">expore: </label>
+          <select name="page-select" id="page-select">
+            <option>...</option>
+            <option value="#mission-page">Mission Statement</option>
+            <option value="#calculator">Calculator</option>
+            <option value="#art">Art</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission-page">
+      <div id="mission-full-div">
+        <h1>Why?</h1>
+        <p id="mission-p">
+          Plain and Simple facilitates the exploration of plain JS in a simple
+          HTML/CSS framework. One page, three languages, zero libraries, no
+          nonsense.<br />
+          The goal: Build something interesting- plainly, simply.
+        </p>
+        <div class="home-button clickable" id="mission-home-button">home</div>
+      </div>
     </section>
 
     <section id="calculator">
-      <h1>this the calculator</h1>
-      <div id="calc-outline">
-        <div id="calc-display"></div>
+      <header id="calculator-header">
+        <h1>Simple calculator</h1>
+        <div class="home-button clickable" id="calculator-home-button">
+          home
+        </div>
+      </header>
+      <div id="entire-calculator-div">
+        <div id="calc-outline">
+          <div id="calc-display">
+            <div id="clear-memory-div">
+              <div id="clear-button" class="clear-mem-buttons clickable"></div>
+              <div id="memory-button" class="clear-mem-buttons clickable"></div>
+            </div>
+            <div id="output-div"></div>
+          </div>
+          <div id="calc-buttons">
+            <div id="function-buttons">
+              <div class="function-button clickable">+</div>
+              <div class="function-button clickable">-</div>
+              <div class="function-button clickable">*</div>
+              <div class="function-button clickable">/</div>
+            </div>
+            <div id="num-buttons">
+              <div class="number-button clickable">1</div>
+              <div class="number-button clickable">2</div>
+              <div class="number-button clickable">3</div>
+              <div class="number-button clickable">4</div>
+              <div class="number-button clickable">5</div>
+              <div class="number-button clickable">6</div>
+              <div class="number-button clickable">7</div>
+              <div class="number-button clickable">8</div>
+              <div class="number-button clickable">9</div>
+              <div class="number-button clickable">#</div>
+              <div class="number-button clickable">9</div>
+              <div class="number-button clickable">*</div>
+            </div>
+            <div id="enter-button" class="clickable button">ENTER</div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="art">
-      <h1>this is ART</h1>
-      <h2 id="testingh2">not working</h2>
-      <div id="canvas-div">
-        <canvas id="canvas" width="1000" height="1000"></canvas>
+      <div id="art-full-div">
+        <header id="art-header">
+          <h1>Simple Art</h1>
+          <div class="home-button clickable" id="art-home-button">home</div>
+        </header>
+        <div id="canvas-controls-div"></div>
+        <div id="canvas-div">
+          <div>A study of a sinusoid, or a mathematical rose</div>
+          <p>
+            For all integer values (i), where 0 < i <= numPoints {<br />
+            k = i * d;<br />
+
+            r = sin(n * k);<br />
+            x = r * cos(k);<br />
+            y = r * sin(k);<br />
+            point[i] = [x, y];<br />
+            } <br />
+            connect consecutive points, while traversing the color spectrum
+          </p>
+          <canvas id="canvas" width="1000px" height="1000px"></canvas>
+        </div>
       </div>
     </section>
+    <!-- <footer>all rights reserved STOMSKI.COM</footer> -->
     <script type="module" src="scripting/index.js"></script>
   </body>
 </html>

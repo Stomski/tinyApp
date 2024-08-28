@@ -1,9 +1,35 @@
 #art {
-  background-color: bisque;
+  background-color: rgb(42, 86, 156);
+  display: block;
+  color: white;
+  height: 100%;
 }
+
+#art-header {
+  display: flex;
+  flex-direction: row;
+}
+
+#art-header h1 {
+  width: 80vw;
+  font-size: 5vmin;
+  margin-left: 2vmin;
+}
+#art-home-button {
+  width: 18vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#art-full-div {
+  display: flex;
+  flex-direction: column;
+}
+
 #canvas-div {
-  border: 2px solid black;
-}
-#canvas {
-  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

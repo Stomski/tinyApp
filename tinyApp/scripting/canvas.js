@@ -40,6 +40,9 @@ below is what i found for a shimming function that will make sure my request ani
 
   gradient.addColorStop(1, "black");
 
+  /*********************** ************************************************************************************************/
+  //hsb converter, h seems to be the easiest way to cycle through colors
+
   function hsbToRgb(h, s, b) {
     let r, g, bl;
     let i = Math.floor(h * 6);
@@ -84,9 +87,12 @@ below is what i found for a shimming function that will make sure my request ani
     return [Math.floor(r * 255), Math.floor(g * 255), Math.floor(bl * 255)];
   }
 
+  /*********************** ************************************************************************************************/
+  // magic
+
   let numPoints = 3000;
 
-  let flag = "up";
+  let flag = "down";
   function drawIt() {
     window.requestAnimFrame(drawIt);
 
@@ -99,7 +105,7 @@ below is what i found for a shimming function that will make sure my request ani
       canvasWidth,
       canvasHeight
     );
-    if (numPoints > 2500) {
+    if (numPoints > 3600) {
       flag = "down";
     }
     if (numPoints < 4) {
@@ -132,13 +138,13 @@ below is what i found for a shimming function that will make sure my request ani
 
       context.lineWidth = 1;
       context.strokeStyle = `rgb(${red}, ${green}, ${blue})`;
-      if (numPoints < 300) {
-        context.strokeStyle = "rgb(255,0,0)";
-      }
+      // if (numPoints < 300) {
+      //   context.strokeStyle = "rgb(255,0,0)";
+      // }
       context.stroke();
     }
 
-    /*********************** */
+    /*********************** ************************************************************************************************/
     //text
 
     context.fillStyle = "white";
@@ -167,5 +173,6 @@ below is what i found for a shimming function that will make sure my request ani
     d += 0.0000005;
     n += 0.00000005;
   }
+  /*********************** ************************************************************************************************/
   window.requestAnimFrame(drawIt);
 }
