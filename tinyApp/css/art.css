@@ -13,6 +13,7 @@
 #art-header h1 {
   width: 80vw;
   font-size: 5vmin;
+  margin-left: 2vmin;
 }
 #art-home-button {
   width: 18vw;
