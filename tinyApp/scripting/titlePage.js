@@ -7,7 +7,7 @@ import * as selectorFunctions from "./selector.js";
 
 export function titleSetup() {
   /*
-    so i need to grab the pull down menu and assign its select functionality
+    so i need to grab the pull down menu and  assign its select functionality
     */
 
   const pulldown = document.querySelector("#page-select");
@@ -21,8 +21,15 @@ export function titleSetup() {
 
   const artHomeButton = document.querySelector("#art-home-button");
   const missionHomeButton = document.querySelector("#mission-home-button");
+  const calculatorHomeButton = document.querySelector(
+    "#calculator-home-button"
+  );
 
   missionHomeButton.onclick = () => {
+    selectorFunctions.sectionStateSetter("#title-page");
+  };
+
+  calculatorHomeButton.onclick = () => {
     selectorFunctions.sectionStateSetter("#title-page");
   };
 
