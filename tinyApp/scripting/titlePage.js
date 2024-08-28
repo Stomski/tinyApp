@@ -7,7 +7,7 @@ import * as selectorFunctions from "./selector.js";
 
 export function titleSetup() {
   /*
-    so i need to grab the pull down menu and assign its select functionality
+    so i need to grab the pull down menu and  assign its select functionality
     */
 
   const pulldown = document.querySelector("#page-select");
