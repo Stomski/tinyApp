@@ -1,3 +1,36 @@
 #calculator {
-  background-color: blueviolet;
+  background-color: aqua;
+}
+#calculator header {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+}
+
+#calculator-header h1 {
+  width: 80vw;
+  font-size: 5vmin;
+  margin-left: 2vmin;
+}
+
+#calculator-home-button {
+  width: 18vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#entire-calculator-div {
+  background-color: rgb(37, 223, 223);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+#calc-outline {
+  border: 2px solid black;
+  height: 500px;
+  width: 375px;
+}
+#calc-display {
+  border: 2px solid rgba(59, 6, 6, 0.714);
 }
