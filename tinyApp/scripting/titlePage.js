@@ -21,8 +21,15 @@ export function titleSetup() {
 
   const artHomeButton = document.querySelector("#art-home-button");
   const missionHomeButton = document.querySelector("#mission-home-button");
+  const calculatorHomeButton = document.querySelector(
+    "#calculator-home-button"
+  );
 
   missionHomeButton.onclick = () => {
+    selectorFunctions.sectionStateSetter("#title-page");
+  };
+
+  calculatorHomeButton.onclick = () => {
     selectorFunctions.sectionStateSetter("#title-page");
   };
 
