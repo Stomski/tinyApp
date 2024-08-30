@@ -12,6 +12,7 @@ how do i keep track of that variable?
 */
 
 import * as canvas from "./canvas.js";
+import * as calc from "./calculator.js";
 
 export function sectionStateSetter(selectionString) {
   console.log(
@@ -41,5 +42,8 @@ export function sectionStateSetter(selectionString) {
   if (selectionElement === titlePage) {
     const pulldown = document.querySelector("#page-select");
     pulldown.value = "...";
+  }
+  if (selectionElement === calculator) {
+    calc.calculatorFunc();
   }
 }
