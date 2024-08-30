@@ -24,6 +24,7 @@ export function calculatorFunc() {
   let previousValue = "";
   let currentValue = "";
   let selectedFunction = "";
+  let rememberedValue = "";
 
   /*********************************************************************** */
   //Functions to run calcs
@@ -81,6 +82,17 @@ export function calculatorFunc() {
 
   //SAVE TO MEMORY
 
+  function memoryButtonClick() {
+    if (rememberedValue === "") {
+      rememberedValue = currentValue;
+      memoryButton.className = "clear-mem-buttons clickable selected";
+    } else {
+      currentValue = rememberedValue;
+      memoryButton.className = "clear-mem-buttons clickable selected";
+      updateDisplay(currentValue);
+    }
+  }
+
   //select a function
   function setFunctionSelect(selectedButton) {
     if (!selectedButton) {
@@ -135,11 +147,15 @@ export function calculatorFunc() {
     previousValue = "";
     currentValue = "";
     selectedFunction = "";
+    rememberedValue = "";
+    memoryButtonClick();
+    memoryButton.className = "clear-mem-buttons clickable";
     updateDisplay(currentValue);
   });
 
   // Add event listener to the memory button
   memoryButton.addEventListener("click", () => {
     console.log("Memory button clicked");
+    memoryButtonClick();
   });
 }
