@@ -81,8 +81,26 @@ export function calculatorFunc() {
 
   //SAVE TO MEMORY
 
+  //select a function
+  function setFunctionSelect(selectedButton) {
+    if (!selectedButton) {
+      functionButtons.forEach((button) => {
+        button.classList.remove("selected");
+      });
+    } else {
+      functionButtons.forEach((button) => {
+        if (button === selectedButton) {
+          button.className = "selected function-button";
+        } else {
+          button.classList.remove("selected");
+        }
+      });
+    }
+  }
+
   /******************************************************************************* */
   // Add event listeners
+
   numberButtons.forEach((button) => {
     button.addEventListener("click", () => {
       console.log(`Number ${button.textContent} clicked`);
@@ -97,13 +115,19 @@ export function calculatorFunc() {
       selectedFunction = button.textContent;
       previousValue = currentValue;
       currentValue = "";
+
       console.log("FUNC SELECTED", selectedFunction);
+      setFunctionSelect(button);
     });
   });
 
   enterButton.addEventListener("click", () => {
     console.log("Enter button clicked");
+
+    setFunctionSelect();
     runCalculation();
+    previousValue = "";
+    selectedFunction = "";
   });
 
   clearButton.addEventListener("click", () => {
