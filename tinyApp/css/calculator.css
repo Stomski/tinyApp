@@ -50,9 +50,18 @@
 }
 .clear-mem-buttons {
   border: 1px solid rgba(59, 6, 6, 0.714);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #output-div {
   border: 3px solid rgba(59, 6, 6, 0.714);
+  font-size: 60px;
+  padding-right: 7px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  overflow: hidden;
 }
 #function-buttons {
   display: grid;
@@ -86,4 +95,9 @@
   justify-content: center;
   align-items: center;
   font-size: 29px;
+}
+
+.selected {
+  background-color: rgb(32, 166, 166);
+  color: white;
 }
