@@ -25,3 +25,9 @@ worked on the HTML docs, going to start with at least my first page, the calcula
 
 the dream here is a sort of carousel like effect for the single page app
 
+### 08312024
+
+
+So the switching engine is working great, and the scripting for the calculator is very stragiht forward, it isnt using processing power as it attempts to render, but the art render DOES take a lot of compute power and i only want the framecount to be running when someone is looking at the canvas, if it is rendered on the page.
+
+
