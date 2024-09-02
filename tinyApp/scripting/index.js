@@ -4,6 +4,7 @@ import * as selectorFunctions from "./selector.js";
 import * as titlePageFunctions from "./titlePage.js";
 
 // selectorFunctions.sectionStateSetter("#calculator");
-selectorFunctions.sectionStateSetter("#title-page");
+// selectorFunctions.sectionStateSetter("#title-page");
+selectorFunctions.sectionStateSetter("#art");
 
 titlePageFunctions.titleSetup();

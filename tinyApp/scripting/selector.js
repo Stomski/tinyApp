@@ -3,6 +3,7 @@ PAGE SELECTOR ENGINE
 */
 
 import * as canvas from "./canvas.js";
+import * as treeCanvas from "./treeCanvas.js";
 import * as calc from "./calculator.js";
 
 export function sectionStateSetter(selectionString) {
@@ -29,6 +30,7 @@ export function sectionStateSetter(selectionString) {
 
   if (selectionElement === art) {
     canvas.canvasBuild();
+    treeCanvas.treeRender();
   }
   if (selectionElement === titlePage) {
     const pulldown = document.querySelector("#page-select");
