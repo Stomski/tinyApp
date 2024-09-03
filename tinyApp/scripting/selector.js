@@ -30,7 +30,7 @@ export function sectionStateSetter(selectionString) {
 
   if (selectionElement === art) {
     canvas.canvasBuild();
-    treeCanvas.treeRender();
+    // treeCanvas.treeRender();
   }
   if (selectionElement === titlePage) {
     const pulldown = document.querySelector("#page-select");
