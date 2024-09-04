@@ -87,9 +87,17 @@
           <h1>Simple Art</h1>
           <div class="home-button clickable" id="art-home-button">home</div>
         </header>
-        <div id="canvas-controls-div"></div>
-        <div id="canvas-div">
-          <div>A study of a sinusoid, or a mathematical rose</div>
+        <div id="art-selectors-div">
+          <div id="art-pulldown">
+            <label for="page-select">Explore a project: </label>
+            <select name="page-select" id="page-select">
+              <option>...</option>
+              <option value="#sinusoidal-rose">Sinusoidal Rose</option>
+              <option value="#fractal-trees">Fractal Tree</option>
+              <option value="#cardiod">Cardiod</option>
+            </select>
+          </div>
+          <div id="art-definition" class="clickable">What is this?</div>
           <p>
             For all integer values (i), where 0 < i <= numPoints {<br />
             k = i * d;<br />
@@ -101,6 +109,9 @@
             } <br />
             connect consecutive points, while traversing the color spectrum
           </p>
+        </div>
+        <div id="canvas-controls-div"></div>
+        <div id="canvas-div">
           <canvas id="canvas" width="1000px" height="1000px"></canvas>
         </div>
         <!-- <label for="angle">angle of recursion:</label>
