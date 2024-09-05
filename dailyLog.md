@@ -25,3 +25,16 @@ worked on the HTML docs, going to start with at least my first page, the calcula
 
 the dream here is a sort of carousel like effect for the single page app
 
+## 08312024
+
+
+So the switching engine is working great, and the scripting for the calculator is very stragihtforward, it isnt using processing power as it attempts to render, but the art render DOES take a lot of compute power and i only want the framecount to be running when someone is looking at the canvas, if it is rendered on the page.
+
+### GOALS:
+
+so today and tomorrow im thinking of as kindof cleaning/wrap up for my art areas, before next week where i build the notes app, things that need to be done to the art still are a bunch of css, the whole thing essentially needs to get css'd, 
+
+1. a flag system for when the canvas is being rendered, or a start stop function for the playback, which always is stopped when the selector engine moves away from the art page?
+2. honestly i want to do a fractal tree with just a normal canvas
+3. i want the canvas to change size with the browser window
+4. user inputs.

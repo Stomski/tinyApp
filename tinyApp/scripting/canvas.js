@@ -164,9 +164,9 @@ below is what i found for a shimming function that will make sure my request ani
     );
     if (flag === "down") {
       numPoints--;
-      console.log("flag pos", flag, frameCount, "framecount");
+      // console.log("flag pos", flag, frameCount, "framecount");
     } else if (flag === "up") {
-      console.log("flag neg", flag);
+      // console.log("flag neg", flag);
       numPoints++;
     }
     frameCount++;

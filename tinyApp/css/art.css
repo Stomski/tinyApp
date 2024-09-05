@@ -26,10 +26,33 @@
   display: flex;
   flex-direction: column;
 }
+#art-selectors-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
 
 #canvas-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#art p {
+  display: none;
+}
+#tree-canvas-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#angle {
+  height: 40px;
+  font-size: 20px;
+}
+#angle-modifier {
+  height: 40px;
+  font-size: 20px;
 }

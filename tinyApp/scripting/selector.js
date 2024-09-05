@@ -1,18 +1,11 @@
 /*
-This file is designed as the engine that will switch the viewable section of this webpage.
-
-my idea is to create individual sections, that will all inhabit the full page of any browser but that are either hidden or visible based on a piece of state that exists in i suppose either local storage or just in the DOM
-
-how do i keep track of that variable?
-
-    - i need to gather all the elements, the sections
-    - i can create a function that will set the given sections visible status to shown, and any other section to hidden
-    -
-
+PAGE SELECTOR ENGINE
 */
 
 import * as canvas from "./canvas.js";
+import * as treeCanvas from "./treeCanvas.js";
 import * as calc from "./calculator.js";
+import * as noteFunctions from "./notes.js";
 
 export function sectionStateSetter(selectionString) {
   console.log(
@@ -23,10 +16,11 @@ export function sectionStateSetter(selectionString) {
   const calculator = document.querySelector("#calculator");
   const titlePage = document.querySelector("#title-page");
   const art = document.querySelector("#art");
+  const notes = document.querySelector("#notes");
 
   let selectionElement = document.querySelector(selectionString);
 
-  const allPages = [missionPage, calculator, titlePage, art];
+  const allPages = [missionPage, calculator, titlePage, art, notes];
 
   allPages.forEach((page) => {
     if (page !== selectionElement) {
@@ -38,6 +32,7 @@ export function sectionStateSetter(selectionString) {
 
   if (selectionElement === art) {
     canvas.canvasBuild();
+    treeCanvas.treeRender();
   }
   if (selectionElement === titlePage) {
     const pulldown = document.querySelector("#page-select");
@@ -45,5 +40,8 @@ export function sectionStateSetter(selectionString) {
   }
   if (selectionElement === calculator) {
     calc.calculatorFunc();
+  }
+  if (selectionElement === notes) {
+    noteFunctions.populateNotes();
   }
 }
