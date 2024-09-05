@@ -18,6 +18,7 @@
             <option value="#mission-page">Mission Statement</option>
             <option value="#calculator">Calculator</option>
             <option value="#art">Art</option>
+            <option value="#notes">Notes</option>
           </select>
         </div>
       </div>
@@ -87,9 +88,17 @@
           <h1>Simple Art</h1>
           <div class="home-button clickable" id="art-home-button">home</div>
         </header>
-        <div id="canvas-controls-div"></div>
-        <div id="canvas-div">
-          <div>A study of a sinusoid, or a mathematical rose</div>
+        <div id="art-selectors-div">
+          <div id="art-pulldown">
+            <label for="page-select">Explore a project: </label>
+            <select name="page-select" id="page-select">
+              <option>...</option>
+              <option value="#sinusoidal-rose">Sinusoidal Rose</option>
+              <option value="#fractal-trees">Fractal Tree</option>
+              <option value="#cardiod">Cardiod</option>
+            </select>
+          </div>
+          <div id="art-definition" class="clickable">What is this?</div>
           <p>
             For all integer values (i), where 0 < i <= numPoints {<br />
             k = i * d;<br />
@@ -101,10 +110,44 @@
             } <br />
             connect consecutive points, while traversing the color spectrum
           </p>
+        </div>
+        <div id="canvas-controls-div"></div>
+        <div id="canvas-div">
           <canvas id="canvas" width="1000px" height="1000px"></canvas>
+        </div>
+        <label for="angle">angle of recursion:</label>
+
+        <input type="number" id="angle" name="angle" min="0" max="10000" />
+        <label for="angle-modifier">skew:</label>
+
+        <input
+          type="number"
+          id="angle-modifier"
+          name="angle-modifier"
+          min="-1000"
+          max="1000"
+        />
+
+        <div id="tree-canvas-div">
+          <canvas id="tree-canvas" width="1920px" height="1000px"></canvas>
         </div>
       </div>
     </section>
+
+    <section id="notes">
+      <div id="notes-full-div">
+        <header id="notes-header">
+          <h1>Simple Scroll</h1>
+          <div class="home-button clickable" id="notes-home-button">home</div>
+        </header>
+        <div id="notes-body-div">
+          <div id="note-app-div">
+            <textarea name="notes-scroll-text" id="notes-scroll"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- <footer>all rights reserved STOMSKI.COM</footer> -->
     <script type="module" src="scripting/index.js"></script>
   </body>
