@@ -32,12 +32,15 @@
 #note-app-div {
   width: 500px;
   height: 500px;
-  border: 2px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #notes textarea {
   resize: none;
-  height: 500px;
-  width: 500px;
-  padding: 10px;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
   font-size: 13px;
 }
