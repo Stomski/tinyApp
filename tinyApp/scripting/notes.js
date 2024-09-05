@@ -1,4 +1,4 @@
 export function populateNotes() {
-  const notes = localStorage.getItem("notes");
-  console.log("notes", notes);
+  const notesInStorage = localStorage.getItem("notes");
+  console.log("notes", notesInStorage);
 }
