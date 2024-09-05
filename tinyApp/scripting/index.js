@@ -5,6 +5,7 @@ import * as titlePageFunctions from "./titlePage.js";
 
 // selectorFunctions.sectionStateSetter("#calculator");
 // selectorFunctions.sectionStateSetter("#title-page");
-selectorFunctions.sectionStateSetter("#art");
+// selectorFunctions.sectionStateSetter("#art");
+selectorFunctions.sectionStateSetter("#notes");
 
 titlePageFunctions.titleSetup();

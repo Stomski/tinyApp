@@ -6,6 +6,7 @@ ok, upgrade, each pages CSS will exist in its own file, and somehow we will cycl
 @import "title.css";
 @import "calculator.css";
 @import "art.css";
+@import "notes.css";
 
 html,
 body {

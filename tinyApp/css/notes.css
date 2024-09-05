@@ -1,0 +1,38 @@
+#notes {
+  background-color: aqua;
+}
+#notes-full-div {
+  height: 100vh;
+}
+#notes header {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  border: 2px solid black;
+}
+
+#notes-header h1 {
+  width: 80vw;
+  font-size: 5vmin;
+  margin-left: 2vmin;
+}
+
+#notes-home-button {
+  width: 18vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#notes-body-div {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#note-app-div {
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  margin-left: 20px;
+  margin-right: 20px;
+}

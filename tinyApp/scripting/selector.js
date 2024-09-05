@@ -5,6 +5,7 @@ PAGE SELECTOR ENGINE
 import * as canvas from "./canvas.js";
 import * as treeCanvas from "./treeCanvas.js";
 import * as calc from "./calculator.js";
+import * as noteFunctions from "./notes.js";
 
 export function sectionStateSetter(selectionString) {
   console.log(
@@ -15,10 +16,11 @@ export function sectionStateSetter(selectionString) {
   const calculator = document.querySelector("#calculator");
   const titlePage = document.querySelector("#title-page");
   const art = document.querySelector("#art");
+  const notes = document.querySelector("#notes");
 
   let selectionElement = document.querySelector(selectionString);
 
-  const allPages = [missionPage, calculator, titlePage, art];
+  const allPages = [missionPage, calculator, titlePage, art, notes];
 
   allPages.forEach((page) => {
     if (page !== selectionElement) {
@@ -30,7 +32,7 @@ export function sectionStateSetter(selectionString) {
 
   if (selectionElement === art) {
     canvas.canvasBuild();
-    // treeCanvas.treeRender();
+    treeCanvas.treeRender();
   }
   if (selectionElement === titlePage) {
     const pulldown = document.querySelector("#page-select");
@@ -38,5 +40,8 @@ export function sectionStateSetter(selectionString) {
   }
   if (selectionElement === calculator) {
     calc.calculatorFunc();
+  }
+  if (selectionElement === notes) {
+    noteFunctions.populateNotes();
   }
 }
