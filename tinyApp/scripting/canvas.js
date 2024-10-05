@@ -4,6 +4,7 @@ export function canvasBuild() {
 below is what i found for a shimming function that will make sure my request animation frame works through every browser, according to some dude on the internet
 */
   // shim layer with setTimeout fallback
+  //this process is being looked at for the next phase of my angular project, and im curious how it is going to affect overall performance
   window.requestAnimFrame = (function () {
     return (
       window.requestAnimationFrame ||
@@ -29,6 +30,7 @@ below is what i found for a shimming function that will make sure my request ani
 
   /***************************************************** */
   // animation attempts
+  //
   context.translate(canvasWidth / 2, canvasHeight / 2 - 30);
 
   let n = 6.324;
